@@ -6,7 +6,10 @@ Rails.application.routes.draw do
       # resources :players 
       resources :quotes 
       get "/scores/:gameid", to: "score_history#topscores"
-      patch "/players/:name/newGame", to: "players#newGame"
+      get "/scores/:gameid/:playerid", to: "score_history#playertopscores"
+      post "/scores/:gameid/:playerid/:score", to: "score_history#addplayerscores"
+      get "/players/:playerid", to: "user#playerDetails"
+      get "/facts/:score_context_id", to: "fact#factDetails"
       patch "/players/:name/win", to: "players#win"
       # get "/quotes", to: "quotes#index"
     end
