@@ -13,7 +13,7 @@ ScoreContext.create!(description: "Global population increase", perSecondVariabl
 ScoreContext.create!(description: "Distance the Earth has traveled around the Sun", perSecondVariable: 18.611111, unit: "miles")
 bezos = ScoreContext.create!(description: "Jeff Bezos's fortune increase", perSecondVariable: 3182.87037, unit: "dollars")
 Fact.create!(score_context_id: bezos.id, details: "According to the Bloomberg Billionaires Index, Bezos' net worth on 1/1/2019 was $99 billion. On 5/1/2019, it was $132 billion, meaning it rose $33 billion.")
-ScoreContext.create!(description: "tweets sent", perSecondVariable: 6000, unit: "dollars")
+ScoreContext.create!(description: "tweets sent", perSecondVariable: 6000, unit: "tweets")
 tom = User.create!(name: "Tom", login_id: "TomM", password: "12345")
 andy = User.create!(name: "Andy", login_id: "AndyC", password: "12345")
 

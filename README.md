@@ -5,17 +5,10 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
 * Database creation
   #$   rails db:create
-
-* Database initialization
   #$   rails db:migrate
+  #$   rails db:seed
 
 * ROUTES:
     GET - /api/v1/scores/:game_id
@@ -32,9 +25,3 @@ Things you may want to cover:
 
     GET - /api/v1/facts/:score_context_id
     ----- Returns all DB attributes of the facts that have a score_context_id same as what is found in params
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
