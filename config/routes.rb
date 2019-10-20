@@ -11,6 +11,8 @@ Rails.application.routes.draw do
       get "/players/:playerid", to: "user#playerDetails"
       get "/facts/:score_context_id", to: "fact#factDetails"
       patch "/players/:name/win", to: "players#win"
+      get "/scoreContexts/:score_context_id", to: "score_context#contextDetails"
+      get "/scoreContexts", to: "score_context#allContextNames"
       # get "/quotes", to: "quotes#index"
     end
   end
