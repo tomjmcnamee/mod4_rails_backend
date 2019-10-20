@@ -13,6 +13,7 @@ Rails.application.routes.draw do
       patch "/players/:name/win", to: "players#win"
       get "/scoreContexts/:score_context_id", to: "score_context#contextDetails"
       get "/scoreContexts", to: "score_context#allContextNames"
+      get "/games", to: "game#fetchAllGames"
       # get "/quotes", to: "quotes#index"
     end
   end

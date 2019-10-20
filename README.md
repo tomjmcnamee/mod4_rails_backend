@@ -30,4 +30,8 @@ Things you may want to cover:
     ----- Returns the score context OBJECT when passing in ID
 
    GET - /api/v1/scoreContexts
-    ----- Returns an array of arrays, each with the Description and ID of a ScoreContext record.  This will be used to create all the dropdown options and values
+    ----- Returns an array of hashes, each with the Description and ID of a ScoreContext record.  This will be used to create all the dropdown options and values
+
+    GET - /ap1/v1/games
+     ----- returns array of all games (name and id), to be used in the select Game dropdown
+
