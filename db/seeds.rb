@@ -7,14 +7,14 @@
 #   Character.create!(name: 'Luke', movie: movies.first)
 
 
-ScoreContext.create!(description: "boring 'ol seconds", perSecondVariable: 1, unit: "seconds", outputStart: "", outputEnd: "passed.  Yeah, not real interesting, is it?  PICK A DIFFERENT CONTEXT!")
-ScoreContext.create!(description: "The speed of sound", perSecondVariable: 0.21313027, unit: "miles", outputStart: "an object moving at the speed of sound traveled", outputEnd: ".")
-ScoreContext.create!(description: "The speed of light", perSecondVariable: 186000, unit: "miles", outputStart: "an object moving at the speed of light traveled", outputEnd: ".")
-ScoreContext.create!(description: "Global population increase", perSecondVariable: 2.6, unit: "people", outputStart: "the global population rose by", outputEnd: ".")
-ScoreContext.create!(description: "Distance the Earth has traveled around the Sun", perSecondVariable: 18.611111, unit: "miles", outputStart: "the Earth traveled", outputEnd: "around the sun.")
-bezos = ScoreContext.create!(description: "Jeff Bezos's fortune increase", perSecondVariable: 3182.87037, unit: "dollars", outputStart: "Jeff Bezos's fortune increased by", outputEnd: ".")
+ScoreContext.create!(description: "boring 'ol seconds", perSecondVariable: 1, outputStart: "", outputEnd: "passed.  Yeah, not real interesting, is it?  PICK A DIFFERENT CONTEXT!")
+ScoreContext.create!(description: "The speed of sound", perSecondVariable: 0.21313027, outputStart: "an object moving at the speed of sound traveled", outputEnd: ".")
+ScoreContext.create!(description: "The speed of light", perSecondVariable: 186000, outputStart: "an object moving at the speed of light traveled", outputEnd: ".")
+ScoreContext.create!(description: "Global population increase", perSecondVariable: 2.6, outputStart: "the global population rose by", outputEnd: ".")
+ScoreContext.create!(description: "Distance the Earth has traveled around the Sun", perSecondVariable: 18.611111, outputStart: "the Earth traveled", outputEnd: "around the sun.")
+bezos = ScoreContext.create!(description: "Jeff Bezos's fortune increase", perSecondVariable: 3182.87037, outputStart: "Jeff Bezos's fortune increased by", outputEnd: ".")
 Fact.create!(score_context_id: bezos.id, details: "According to the Bloomberg Billionaires Index, Bezos' net worth on 1/1/2019 was $99 billion. On 5/1/2019, it was $132 billion, meaning it rose $33 billion.")
-ScoreContext.create!(description: "tweets sent", perSecondVariable: 6000, unit: "tweets", outputStart: "", outputEnd: "were sent worldwide.")
+ScoreContext.create!(description: "tweets sent", perSecondVariable: 6000, outputStart: "", outputEnd: "were sent worldwide.")
 tom = User.create!(name: "Tom", login_id: "TomM", password: "12345")
 andy = User.create!(name: "Andy", login_id: "AndyC", password: "12345")
 

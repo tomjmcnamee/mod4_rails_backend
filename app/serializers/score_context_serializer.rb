@@ -1,3 +1,3 @@
 class ScoreContextSerializer < ActiveModel::Serializer
-  attributes :description, :perSecondVariable, :unit, :outputStart, :outputEnd
+  attributes :description, :perSecondVariable, :outputStart, :outputEnd
 end
