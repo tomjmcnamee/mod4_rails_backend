@@ -6,7 +6,7 @@ class Api::V1::ScoreContextController < ApplicationController
   end
 
   def allContextNames
-    contextDescriptionArr = ScoreContext.all.map{|contx| contx.description}
+    contextDescriptionArr = ScoreContext.all.map{|contx| [contx.id, contx.description]}
     render json: contextDescriptionArr
   end
 

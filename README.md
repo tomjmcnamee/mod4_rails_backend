@@ -25,3 +25,9 @@ Things you may want to cover:
 
     GET - /api/v1/facts/:score_context_id
     ----- Returns all DB attributes of the facts that have a score_context_id same as what is found in params
+
+   GET - /api/v1/scoreContexts/:score_context_id
+    ----- Returns the score context OBJECT when passing in ID
+
+   GET - /api/v1/scoreContexts
+    ----- Returns an array of arrays, each with the Description and ID of a ScoreContext record.  This will be used to create all the dropdown options and values
