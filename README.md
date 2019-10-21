@@ -5,6 +5,9 @@ application up and running.
 
 Things you may want to cover:
 
+ If the DB is populated, but you want to wipe it out to start with a fresh seeding, run the below command first:
+ "rake db:migrate:reset"  This will drop all, create the DB, then remigrate all.
+
 * Database creation
   #$   rails db:create
   #$   rails db:migrate
