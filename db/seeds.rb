@@ -6,18 +6,19 @@
 
 
 
-ScoreContext.create!(description: "boring 'ol seconds", perSecondVariable: 1, outputStart: "", outputEnd: " seconds passed.  Yeah, not real interesting, is it?  PICK A DIFFERENT CONTEXT!", unit: "seconds")
-ScoreContext.create!(description: "The speed of sound", perSecondVariable: 0.21313027, outputStart: "an object moving at the speed of sound traveled ", outputEnd: " miles.", unit: "miles")
-ScoreContext.create!(description: "The speed of light", perSecondVariable: 186000, outputStart: "an object moving at the speed of light traveled ", outputEnd: " miles.", unit: "miles")
-ScoreContext.create!(description: "Global population increase", perSecondVariable: 2.6, outputStart: "the global population rose by ", outputEnd: " people.", unit: "people")
-earth =ScoreContext.create!(description: "Distance the Earth has traveled around the Sun", perSecondVariable: 18.50553929, outputStart: "the Earth traveled ", outputEnd: " miles around the sun.", unit: "miles")
-Fact.create!(score_context_id: earth.id, details: "Every year, the Earth travels 92.96 million miles around the sun, at a rate of 66,620 miles per hour!  WOW!")
-bezos = ScoreContext.create!(description: "Jeff Bezos's fortune increase", perSecondVariable: 3182.87037, outputStart: "Jeff Bezos's fortune increased by $", outputEnd: ".", unit: "dollars")
+seconds = ScoreContext.create!(description: "boring 'ol seconds", perSecondVariable: 1, outputStart: "", outputEnd: " seconds passed.  Yeah, not real interesting, is it?  PICK A DIFFERENT CONTEXT!", unit: "seconds", image: "https://66.media.tumblr.com/a3360cf64800079574ebda2d58a02178/tumblr_inline_ol4mqmyQGd1qekxju_640.gifv")
+sound = ScoreContext.create!(description: "The speed of sound", perSecondVariable: 0.21313027, outputStart: "an object moving at the speed of sound traveled ", outputEnd: " miles.", unit: "miles", image: "https://i.pinimg.com/originals/f6/57/c8/f657c875461381c86bc86204d8c7b2e9.gif")
+light = ScoreContext.create!(description: "The speed of light", perSecondVariable: 186000, outputStart: "an object moving at the speed of light traveled ", outputEnd: " miles.", unit: "miles", image: "https://i.imgur.com/RuJYgPu.gif")
+population = ScoreContext.create!(description: "Global population increase", perSecondVariable: 2.6, outputStart: "the global population rose by ", outputEnd: " people.", unit: "people", image: "http://theworld-today.weebly.com/uploads/4/4/5/9/44595823/2082223.gif")
+earth =ScoreContext.create!(description: "Distance the Earth has traveled around the Sun", perSecondVariable: 18.50553929, outputStart: "the Earth traveled ", outputEnd: " miles around the sun.", unit: "miles", image: "https://i.imgur.com/YXn5xQN.gif")
+bezos = ScoreContext.create!(description: "Jeff Bezos's fortune increase", perSecondVariable: 3182.87037, outputStart: "Jeff Bezos's fortune increased by $", outputEnd: ".", unit: "dollars", image: "https://assets.entrepreneur.com/content/3x2/2000/20190607142532-jeff-bezos.jpeg")
+tweets = ScoreContext.create!(description: "tweets sent", perSecondVariable: 6000, outputStart: "", outputEnd: " tweets were sent worldwide.", unit: "tweets", image: "https://cdn.ilovefreesoftware.com/wp-content/uploads/2017/06/twitter-gif-downloader.gif")
+moon = ScoreContext.create!(description: "Distance the Moon has traveled around the Earth", perSecondVariable: 0.635, outputStart: "the Moon traveled ", outputEnd: " miles around the Earth.", unit: "miles", image: "https://res.cloudinary.com/jerrick/image/upload/w_720/otzzmunvucte85o5b9ie.gif")
+iss = ScoreContext.create!(description: "Distance traveled by the International Space Station", perSecondVariable: 4.76, outputStart: "the International Space Station traveled ", outputEnd: " miles.", unit: "miles", image: "https://robbreportedit.files.wordpress.com/2019/06/iss056e201174.jpg")
+
+earthFact1 = Fact.create!(score_context_id: earth.id, details: "Every year, the Earth travels 92.96 million miles around the sun, at a rate of 66,620 miles per hour!  WOW!")
 bezosFact1 = Fact.create!(score_context_id: bezos.id, details: "According to the Bloomberg Billionaires Index, Bezos' net worth on 1/1/2019 was $99 billion. On 5/1/2019, it was $132 billion, meaning it rose $33 billion.")
-ScoreContext.create!(description: "tweets sent", perSecondVariable: 6000, outputStart: "", outputEnd: " tweets were sent worldwide.", unit: "tweets")
-moon = ScoreContext.create!(description: "Distance the Moon has traveled around the Earth", perSecondVariable: 0.635, outputStart: "the Moon traveled ", outputEnd: " miles around the Earth.", unit: "miles")
 moonFact1 = Fact.create!(score_context_id: moon.id, details: "The Moon orbits the earth at a relative speed of 2286 miles per hour!")
-iss = ScoreContext.create!(description: "Distance traveled by the International Space Station", perSecondVariable: 4.76, outputStart: "the International Space Station traveled ", outputEnd: " miles.", unit: "miles")
 issFact1 = Fact.create!(score_context_id: iss.id, details: "The ISS travels at a staggering 17,150 miles per hour!")
 
 tom = User.create!(name: "Tom", login_id: "TomM", password: "12345")
