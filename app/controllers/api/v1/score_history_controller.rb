@@ -1,7 +1,9 @@
 class Api::V1::ScoreHistoryController < ApplicationController
 
   def topscores
-    topScores = ScoreHistory.where(game_id: params[:gameid]).order("score ASC").limit(10)
+    # topScores = ActiveRecord::Base.connection.execute("SELECT scoreh.id, scoreh.game_id, scoreh.user_id, u.name, scoreh.score FROM score_histories as scoreh JOIN users as u ON scoreh.user_id = u.id WHERE game_id = #{params[:gameid]} ORDER BY score ASC LIMIT 10;")
+    topScores = ScoreHistory.getTop10PerGameWithNames(params[:gameid])
+
     render json: topScores
   end
 
