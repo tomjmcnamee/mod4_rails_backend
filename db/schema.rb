@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_20_224916) do
+ActiveRecord::Schema.define(version: 2019_10_20_220640) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 2019_10_20_224916) do
   create_table "score_contexts", force: :cascade do |t|
     t.string "description"
     t.float "perSecondVariable"
+    t.string "unit"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "outputStart"
