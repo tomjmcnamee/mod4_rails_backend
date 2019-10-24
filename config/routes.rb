@@ -7,7 +7,8 @@ Rails.application.routes.draw do
       resources :quotes 
       get "/scores/:gameid", to: "score_history#topscores"
       get "/scores/:gameid/:playerid", to: "score_history#playertopscores"
-      post "/scores/:gameid/:playerid/:score", to: "score_history#addplayerscores"
+      # post "/scores/:gameid/:playerid/:score", to: "score_history#addplayerscores"
+      post "/scores", to: "score_history#addplayerscores"
       patch "/players/:name/win", to: "players#win"
       get "/players/:playerid", to: "user#playerDetails"
       post "/players/", to: "user#create"

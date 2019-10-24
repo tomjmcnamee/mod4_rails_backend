@@ -13,7 +13,8 @@ class Api::V1::ScoreHistoryController < ApplicationController
   end
 
   def addplayerscores
-    newScore = ScoreHistory.create(game_id: params[:gameid], user_id: params[:playerid], score: params[:score])
+    newScore = ScoreHistory.create(game_id: params["score_history"][:game_id], user_id: params["score_history"][:user_id], score: params["score_history"][:score])
+    # newScore = ScoreHistory.create(params["score_history"])
     render json: newScore
   end
   
@@ -22,7 +23,7 @@ class Api::V1::ScoreHistoryController < ApplicationController
 private
 
   def score_history_params
-    params.require(score_history).permit(:game_id, :user_id, :score)
+    params.require(:score_history).permit(:game_id, :user_id, :score)
   end
 
 end
