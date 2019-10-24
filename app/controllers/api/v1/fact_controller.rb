@@ -1,7 +1,7 @@
 class Api::V1::FactController < ApplicationController
 
   def factDetails
-    fact = Fact.find_by(score_context_id: params[:score_context_id])
+    fact = Fact.where("score_context_id = ?", params[:score_context_id])
     render json: fact
   end
 
